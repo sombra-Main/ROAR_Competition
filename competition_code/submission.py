@@ -230,17 +230,6 @@ class RoarCompetitionSolution:
             brake = max(brake, 0.58)
             
 
-        if self.step_count % 20 == 0:
-            print(
-                f"speed={vehicle_velocity_norm:.2f} | "
-                f"lookahead={lookahead} | "
-                f"turn_angle={turn_angle:.3f} | "
-                f"target_speed={target_speed:.1f} | "
-                f"steer={steer_control:.3f} | "
-                f"throttle={throttle:.2f} | "
-                f"brake={brake:.2f}"
-            )
-
         control = {
             "throttle": throttle,
             "steer": steer_control,
